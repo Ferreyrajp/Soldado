@@ -13,6 +13,7 @@ public:
 	inline ~vistasoldado() { delete& opcion; };
 
 	void primervista() {
+		system("cls");
 		std::cout << "-== Bienvenido al campo de entrenamiento, Soldado ==-" << endl;
 		std::cout << "" << endl;
 		std::cout << "¿Que desea hacer?" << endl;
@@ -26,6 +27,7 @@ public:
 	};
 
 	void mostrararmas() {
+		system("cls");
 		std::cout << "Por favor, escoja el arma que desea utilizar:" << endl;
 		std::cout << "" << endl;
 		std::cout << "1- Revolver" << endl;
