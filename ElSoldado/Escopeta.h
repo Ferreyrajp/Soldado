@@ -7,11 +7,9 @@ private:
 	string nombre;
 	string sonido;
 public:
-	Escopeta() { };
+	Escopeta() { nombre = "Escopeta"; sonido = "¡Paaaaaa!...";};
 	~Escopeta() { delete& nombre; delete& sonido; };
-	string getnombre() {return(nombre);};
-	string getsonido() { return(sonido); };
-	void putnombre() { nombre= "Escopeta"; };
-	void putsonido() { sonido= "¡Pááá!..."; };
+	string getnombre() override {return this->nombre;};
+	string getsonido() override { return this->sonido; };
 };
 

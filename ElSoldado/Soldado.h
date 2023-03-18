@@ -7,14 +7,15 @@ using namespace std;
 class Soldado
 {
 private:
-	ArmaSoldado* armasoldado;
+	ArmaSoldado* armasoldado=NULL;
 public:
-	Soldado() {};
+	Soldado() { };
 	~Soldado() { delete armasoldado; };
-	void recojerArma() {};
+	inline void recojerArma(ArmaSoldado &Armsol) { this->armasoldado = &Armsol; };
 	void dejarArma() {};
-	void Disparar() {};
-	void verArma() {};
+	string Disparar() { return armasoldado->getsonido(); };
+	bool estaarmado() { if (this->armasoldado == NULL) { return false; } else { return true; } };
+	string verArma() { return armasoldado->getnombre(); };
 	
 
 };

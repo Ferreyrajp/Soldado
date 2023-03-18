@@ -6,11 +6,9 @@ private:
 	string nombre;
 	string sonido;
 public:
-	revolver() { };
+	revolver() { nombre = "Revolver"; sonido = "Pum...";};
 	~revolver() { delete& nombre; delete& sonido; };
-	string getnombre() { return(nombre); };
-	string getsonido() { return(sonido); };
-	void putnombre() { nombre = "Revolver"; };
-	void putsonido() { sonido = "Púm..."; };
+	string getnombre() override { return this->nombre; };
+	string getsonido() override { return this->sonido; };
 };
 
